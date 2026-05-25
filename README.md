@@ -19,7 +19,7 @@ let logger = new BasicConsoleLogger({ instanceName: 'MyApp', isLogEnabled: true 
 ```
 
 - Use `logger.log('message')` to output a standard `[LOG]` message to the console.
-- Use `logger.warning('message')` to output a `[WARNING]` message via `console.warn`.
+- Use `logger.warn('message')` to output a `[WARNING]` message via `console.warn`.
 - Use `logger.error('message')` to output an `[ERROR]` message via `console.error`.
 
 ---
@@ -75,7 +75,7 @@ new BasicConsoleLogger({
 ## Shorthand methods
 
 ```js
-logger.warning('something looks off', 'myFunction');
+logger.warn('something looks off', 'myFunction');
 logger.error('something went wrong',  'myFunction');
 logger.error('critical failure',      'myFunction', true); // throws
 ```
