@@ -42,6 +42,10 @@ class BasicConsoleLogger{
 		this.isLogEnabled = params.isLogEnabled ?? true;
 		this.instanceName = params.instanceName ?? "";		
 
+		if(typeof(window.log) == 'undefined'){ window.log = (...args) => this.log(...args); }
+        if(typeof(window.error) == 'undefined'){ window.error = (...args) => this.error(...args); }
+        if(typeof(window.warn) == 'undefined'){ window.warn = (...args) => this.warn(...args); }
+
 	}
 	
 	//logging utility
